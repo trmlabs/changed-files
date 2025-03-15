@@ -1,3 +1,24 @@
+# DISCLAIMER: EMERGENCY MIRROR
+
+## Origin and Purpose
+
+This repository is an emergency mirror of the [tj-actions/changed-files](https://github.com/tj-actions/changed-files) GitHub Action. We created this mirror after the original repository was compromised in a supply chain attack.
+
+- **Origin**: We pulled the latest commit of the mirror from https://code.forgejo.org/tj-actions/changed-files/src/tag/v45.0.7
+- **Security**: We subsequently reverted the malicious commit: https://code.forgejo.org/tj-actions/changed-files/commit/0e58ed8671d6b60d0890c21b07f8835ace038e67
+- **Purpose**: This was built as a short-term workaround for our own teams, and we're sharing it in case others find it useful during this security incident
+
+## Important Security Notice
+
+- We **DO NOT** make any guarantees about this software
+- We strongly encourage all teams to **Do Your Own Research** before using this mirror
+- This is a temporary solution until the official repository is secured
+- If you have questions or would like to collaborate on a broader community effort to address this issue, please reach out to security@trmlabs.com
+
+## Usage Recommendation
+
+Consider pinning to a specific commit hash rather than a version tag for maximum security when using this mirror.
+
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge\&logo=ubuntu\&logoColor=white)](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)
 [![Mac OS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge\&logo=macos\&logoColor=F0F0F0)](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)
 [![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge\&logo=windows\&logoColor=white)](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)
