@@ -17,7 +17,13 @@ This repository is an emergency mirror of the [tj-actions/changed-files](https:/
 
 ## Usage Recommendation
 
-Consider pinning to a specific commit hash rather than a version tag for maximum security when using this mirror.
+- Consider pinning to a specific commit hash rather than a version tag for maximum security when using this mirror.
+- Replace the `uses: tj-actions/changed-files@vXX` with `uses: trmlabs/changed-files@<commit-hash>` or `uses: trmlabs/changed-files@v1`
+
+
+
+---
+
 
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge\&logo=ubuntu\&logoColor=white)](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)
 [![Mac OS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge\&logo=macos\&logoColor=F0F0F0)](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)
