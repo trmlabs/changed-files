@@ -40,6 +40,7 @@
     "@stdlib/utils-convert-path": "^0.2.1",
     "lodash": "^4.17.21",
     "micromatch": "^4.0.5",
+    "minimatch": "10.2.2",
     "yaml": "^2.3.1"
   },
   "devDependencies": {
