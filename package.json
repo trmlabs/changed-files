@@ -32,6 +32,9 @@
     "url": "https://github.com/tj-actions/changed-files/issues"
   },
   "homepage": "https://github.com/tj-actions/changed-files#readme",
+  "resolutions": {
+    "minimatch": "10.2.2"
+  },
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/exec": "^1.1.1",
